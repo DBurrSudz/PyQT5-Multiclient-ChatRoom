@@ -17,7 +17,8 @@ from Client.Views import ChatRoom
 
 class Client(ChatRoom.Ui_MainWindow):
     """Inherits the Main Window that displays the ChatRoom and sets up the functionalities as well
-       as establishing a connection to the server.
+       as establishing a connection to the server. Allows users to send and receive messages to and from
+       other clients.
     """
 
     __FORMAT = "utf-8"

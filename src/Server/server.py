@@ -172,8 +172,6 @@ class Server(object):
             self.__list_of_users()  
             self.__broadcast(username, "[*] " + username + " has disconnected from the server.")
 
-        print(self.__connected_clients)
-
 
 
 
