@@ -18,13 +18,13 @@ class Server(object):
        other clients.
     """
 
-    __BUFFER = 4000
-    __PORT = 5050
+    __BUFFER = 4000 #Can be changed if wanted to.
+    __PORT = 5050 #Can be changed if wanted to.
     __HOST = socket.gethostbyname(socket.gethostname())
     __ADDR = (__HOST, __PORT)
     __FORMAT = "utf-8"
     __connected_clients = {} #Dictionary to map key/value pairs of connected clients.
-    __connected_usernames = []
+    __connected_usernames = [] #List to store usernames to show to all clients.
 
   
 
@@ -117,7 +117,7 @@ class Server(object):
 
         for key, values in self.__connected_clients.items():
             if key == username:
-                continue
+                continue  #Exclude the current client.
             else:
                 values['client'].send(message.encode(self.__FORMAT))
 

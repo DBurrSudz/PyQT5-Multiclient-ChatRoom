@@ -45,7 +45,7 @@ class Client(ChatRoom.Ui_MainWindow):
             self.__client.connect(self.__SERVER)
         
         except ConnectionRefusedError:
-            print("Some Connection Error Occurred.")
+            print("Unable to connect to the server.")
             sys.exit()
 
 
@@ -123,8 +123,7 @@ class Client(ChatRoom.Ui_MainWindow):
 
            
         except (ConnectionAbortedError, ConnectionResetError):
-            print("User pressed Disconnect.")
-            sys.exit()
+            pass
 
 
 
@@ -137,8 +136,7 @@ class Client(ChatRoom.Ui_MainWindow):
             self.__client.send("DISCONNECT".encode(self.__FORMAT))
 
         except(ConnectionResetError):
-            print("Error occurred here.")
-            sys.exit()
+            pass
 
         
         self.__client.close()

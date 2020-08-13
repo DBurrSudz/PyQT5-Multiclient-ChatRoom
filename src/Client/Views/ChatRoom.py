@@ -15,6 +15,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(641, 381)
+        MainWindow.setFixedSize(641,381)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.textBrowser = QtWidgets.QTextBrowser(self.centralwidget)
@@ -46,9 +47,6 @@ class Ui_MainWindow(object):
         self.label = QtWidgets.QLabel(self.centralwidget)
         self.label.setGeometry(QtCore.QRect(490, 10, 41, 21))
         self.label.setObjectName("label")
-        #self.user_count = QtWidgets.QLabel(self.centralwidget)
-        #self.user_count.setGeometry(QtCore.QRect(530, 10, 47, 21))
-        #self.user_count.setObjectName("user_count")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 641, 21))
@@ -68,4 +66,3 @@ class Ui_MainWindow(object):
         self.disconnect_button.setText(_translate("MainWindow", "DISCONNECT"))
         self.send_button.setText(_translate("MainWindow", "SEND"))
         self.label.setText(_translate("MainWindow", "USERS: "))
-        #self.user_count.setText(_translate("MainWindow", "TextLabel"))
